@@ -15,10 +15,9 @@
  *  11. Quote Form
  *  12. About (Full)
  *  13. Contact
- *  14. FAQ
- *  15. CTA Banner
- *  16. Footer
- *  17. Responsive (mobile breakpoints)
+ *  14. CTA Banner
+ *  15. Footer
+ *  16. Responsive (mobile breakpoints)
  * ═══════════════════════════════════════════════════════════════════ */
 
 
@@ -774,31 +773,6 @@ button { cursor: pointer; border: none; font-family: 'Inter', sans-serif; }
       line-height: 1.75;
       color: rgba(255,255,255,0.85);
     }
-    .license-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 16px;
-      margin-top: 24px;
-    }
-    .license-item {
-      background: var(--offwhite);
-      padding: 16px 20px;
-      border-radius: var(--radius);
-      border-left: 3px solid var(--orange);
-    }
-    .license-item .li-label {
-      font-size: 11px;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      color: var(--orange);
-      font-weight: 700;
-    }
-    .license-item .li-val {
-      font-size: 15px;
-      font-weight: 600;
-      color: var(--charcoal);
-      margin-top: 4px;
-    }
     .service-area-list {
       display: flex;
       flex-wrap: wrap;
@@ -891,63 +865,6 @@ button { cursor: pointer; border: none; font-family: 'Inter', sans-serif; }
       color: var(--midgray);
     }
     .hours-row .day { font-weight: 600; color: var(--charcoal); }
-
-    /* ===== FAQ ===== */
-    #faq {
-      background: var(--white);
-    }
-    .faq-list {
-      max-width: 800px;
-      margin: 0 auto;
-    }
-    .faq-item {
-      border-bottom: 1px solid var(--ltgray);
-    }
-    .faq-q {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 22px 0;
-      cursor: pointer;
-      user-select: none;
-    }
-    .faq-q span {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-size: 20px;
-      font-weight: 700;
-      text-transform: uppercase;
-      color: var(--charcoal);
-      line-height: 1.3;
-      padding-right: 20px;
-    }
-    .faq-icon {
-      width: 28px;
-      height: 28px;
-      border: 2px solid var(--ltgray);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-shrink: 0;
-      font-size: 18px;
-      color: var(--orange);
-      transition: all var(--transition);
-      font-weight: 700;
-    }
-    .faq-item.open .faq-icon {
-      background: var(--orange);
-      border-color: var(--orange);
-      color: var(--white);
-      transform: rotate(45deg);
-    }
-    .faq-a {
-      display: none;
-      padding-bottom: 20px;
-      font-size: 15px;
-      color: var(--midgray);
-      line-height: 1.75;
-    }
-    .faq-item.open .faq-a { display: block; }
 
     /* ===== CTA BANNER ===== */
     .cta-banner {
@@ -1130,7 +1047,7 @@ button { cursor: pointer; border: none; font-family: 'Inter', sans-serif; }
 
 /* About full layout helpers */
 .about-lead { font-size: 17px; line-height: 1.75; color: var(--midgray); margin-bottom: 20px; }
-.cred-heading, .area-heading { font-size: 24px; font-weight: 800; text-transform: uppercase; margin: 32px 0 16px; }
+.area-heading { font-size: 24px; font-weight: 800; text-transform: uppercase; margin: 32px 0 16px; }
 .about-actions { display: flex; gap: 12px; margin-top: 24px; flex-wrap: wrap; }
 .about-full-left p { font-size: 16px; line-height: 1.75; color: var(--midgray); margin-bottom: 16px; }
 

@@ -1,6 +1,6 @@
 /* ═══════════════════════════════════════════════════════════════════
  *  MAC CONTRACTING — MAIN SCRIPT
- *  All site behaviour: navigation, forms, gallery filters, FAQ, etc.
+ *  All site behaviour: navigation, forms, gallery filters, etc.
  *  Form submissions use Formspree — configure endpoints in config.js
  * ═══════════════════════════════════════════════════════════════════ */
 
@@ -15,7 +15,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initSmoothScroll();
   initServiceCards();
   initProjectFilter();
-  initFAQ();
   initQuoteForm();
   initContactForm();
   initMapEmbed();
@@ -74,7 +73,7 @@ function initNavigation() {
   const hamburger  = document.getElementById('hamburger');
   const mobileMenu = document.getElementById('mobile-menu');
   const nav        = document.getElementById('nav');
-  const sections   = document.querySelectorAll('section[id], [id="faq"]');
+  const sections   = document.querySelectorAll('section[id]');
   const navLinks   = document.querySelectorAll('.nav-links a');
 
   // Hamburger toggle
@@ -156,22 +155,6 @@ function filterProjects(cat, activeBtn) {
     const cats = card.dataset.cat || '';
     card.style.display = (cat === 'all' || cats.includes(cat)) ? '' : 'none';
   });
-}
-
-/* ────────────────────────────────────────────────────────────────
- *  FAQ ACCORDION
- * ──────────────────────────────────────────────────────────────── */
-function initFAQ() {
-  document.querySelectorAll('.faq-q').forEach(q => {
-    q.addEventListener('click', () => toggleFAQ(q));
-  });
-}
-
-function toggleFAQ(el) {
-  const item    = el.closest('.faq-item');
-  const wasOpen = item.classList.contains('open');
-  document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
-  if (!wasOpen) item.classList.add('open');
 }
 
 /* ────────────────────────────────────────────────────────────────
