@@ -34,7 +34,6 @@ const SITE_CONFIG = {
   state:         'CA',
   zip:           '91702',
   founded:       '2009',
-  license:       '[CSLB License #]',          // e.g. #1098765
   website:       'https://www.maccontracting.com',
 
   // ── BUSINESS HOURS ──────────────────────────────────────────────────

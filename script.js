@@ -30,8 +30,8 @@ function initDynamicContent() {
   // Phone links
   document.querySelectorAll('[data-phone]').forEach(el => {
     el.href    = c.phoneLink;
-    el.textContent = el.dataset.phone === 'icon'
-      ? '📞 ' + c.phone
+    el.textContent = el.dataset.phone === 'call' ? '📞 Call Now'
+      : el.dataset.phone === 'icon' ? '📞 ' + c.phone
       : c.phone;
   });
 
@@ -51,11 +51,11 @@ function initDynamicContent() {
     el.href = c.yelpUrl;
   });
 
-  // Footer copyright year + license
+  // Footer copyright year
   document.querySelectorAll('[data-copyright]').forEach(el => {
     el.textContent =
       '© ' + new Date().getFullYear() + ' ' + c.company +
-      '. All rights reserved.  ·  CA CSLB Lic. ' + c.license + '  ·  ' + c.city + ', ' + c.state;
+      '. All rights reserved.  ·  ' + c.city + ', ' + c.state;
   });
 
   // Business hours list
