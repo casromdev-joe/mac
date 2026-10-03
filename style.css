@@ -1023,17 +1023,9 @@ button { cursor: pointer; border: none; font-family: 'Inter', sans-serif; }
 /* Form heading */
 .form-heading { font-size: 24px; font-weight: 800; text-transform: uppercase; margin-bottom: 24px; }
 
-/* Tall textarea */
-.tall-textarea { min-height: 130px !important; }
-
-/* Form success inner (contact page inline success) */
-.form-success-inner { text-align: center; padding: 40px 20px; }
-.form-success-inner .check { font-size: 48px; margin-bottom: 12px; }
-.form-success-inner h3 { font-size: 22px; font-weight: 800; text-transform: uppercase; }
-.form-success-inner p { color: var(--midgray); margin-top: 8px; }
-
 /* Contact right column */
 .contact-right { }
+.contact-right .after-hours-box { margin-top: 0; }
 
 /* After-hours box */
 .after-hours-box {
@@ -1046,7 +1038,7 @@ button { cursor: pointer; border: none; font-family: 'Inter', sans-serif; }
 .ah-text  { font-size: 15px; color: rgba(255,255,255,0.85); }
 
 /* Hours list (populated by JS) */
-.hours-row { display: flex; justify-content: space-between; font-size: 14px; padding: 8px 0; border-bottom: 1px solid var(--ltgray); color: var(--midgray); }
+.hours-row { display: flex; justify-content: space-between; gap: 12px; font-size: 14px; padding: 8px 0; border-bottom: 1px solid var(--ltgray); color: var(--midgray); }
 .hours-row .day { font-weight: 600; color: var(--charcoal); }
 
 /* Contact detail link colours */

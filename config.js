@@ -9,7 +9,7 @@
  *  1. Go to https://formspree.io and create a free account.
  *  2. Create a new form — enter the Gmail address you want leads sent to.
  *  3. Copy the form endpoint (looks like: https://formspree.io/f/xabc1234)
- *  4. Paste it into FORMSPREE_QUOTE_ENDPOINT and FORMSPREE_CONTACT_ENDPOINT below.
+ *  4. Paste it into FORMSPREE_QUOTE_ENDPOINT below.
  *  5. Formspree will email every submission directly to that Gmail.
  *  ═══════════════════════════════════════════════════════════════════
  */
@@ -23,7 +23,6 @@ const SITE_CONFIG = {
   phoneLink:     'tel:+16263886790',          // used in <a href="tel:...">
   email:         'info@maccontracting.com',
   address:       'Azusa, CA 91702',
-  streetAddress: '[Street address here]',     // full street address
   city:          'Azusa',
   state:         'CA',
   zip:           '91702',
@@ -40,6 +39,5 @@ const SITE_CONFIG = {
   // ── FORM ENDPOINTS (Formspree → delivers to Gmail) ─────────────────
   // See instructions at the top of this file.
   FORMSPREE_QUOTE_ENDPOINT:   'https://formspree.io/f/YOUR_FORM_ID',
-  FORMSPREE_CONTACT_ENDPOINT: 'https://formspree.io/f/YOUR_FORM_ID',
 
 };
