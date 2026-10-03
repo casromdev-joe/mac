@@ -47,8 +47,6 @@ const SITE_CONFIG = {
   // ── STATS (hero section) ─────────────────────────────────────────────
   stats: [
     { num: '15+',  label: 'Years Experience'   },
-    { num: '4',    label: 'Counties Served'     },
-    { num: '500+', label: 'Projects Complete'   },
   ],
 
   // ── SOCIAL / REVIEW LINKS ────────────────────────────────────────────
