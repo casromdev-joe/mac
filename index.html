@@ -9,7 +9,7 @@
   <meta name="description" content="MAC Contracting is a licensed General Engineering Contractor based in Azusa, CA, serving Los Angeles, Riverside, San Bernardino, and Orange Counties. Foundations, flatwork, ADA compliance, driveways, commercial concrete & more.">
   <meta name="keywords" content="general engineering contractor Los Angeles, general engineering contractor Azusa, commercial concrete, residential concrete, foundation contractor, flatwork, driveways, sidewalks, ADA compliance, concrete repair, concrete sealing, concrete resurfacing, decorative concrete, concrete contractor Orange County, concrete contractor Riverside, San Bernardino concrete, tenant improvements, site preparation, new construction concrete, concrete installation">
   <meta property="og:title" content="MAC Contracting | General Engineering Contractor – Southern California">
-  <meta property="og:description" content="Licensed General Engineering Contractor serving LA, Riverside, San Bernardino & Orange Counties. Quality work, competitive pricing, free estimates.">
+  <meta property="og:description" content="Licensed General Engineering Contractor serving LA, Riverside, San Bernardino & Orange Counties. Quality work and competitive pricing.">
   <meta property="og:type" content="website">
   <meta name="robots" content="index, follow">
   <meta name="geo.region" content="US-CA">
@@ -23,21 +23,21 @@
   <!-- ═══ STYLES ═══ -->
   <link rel="stylesheet" href="style.css">
 
-  <!-- ═══ SITE CONFIG — edit contact info, form endpoints, map URL ═══ -->
+  <!-- ═══ SITE CONFIG — edit contact info, form endpoints ═══ -->
   <script src="config.js"></script>
 </head>
 <body>
 
 <!-- ══════════════════════════════════════════════════════════════════
-  MOBILE TAP-TO-CALL BAR (visible only on small screens via CSS)
+  MOBILE TAP-TO-CALL (bottom bar on small screens, paired with #float-quote)
   Phone number pulled from config.js → SITE_CONFIG.phone
 ════════════════════════════════════════════════════════════════════ -->
-<a href="tel:+16263886790" class="mobile-call" data-phone="icon">📞 Tap to Call</a>
+<a href="tel:+16263886790" class="mobile-call" data-phone="call">📞 Call Now</a>
 
 <!-- ══════════════════════════════════════════════════════════════════
   FLOATING QUOTE BUTTON
 ════════════════════════════════════════════════════════════════════ -->
-<a href="#quote" id="float-quote">📋 Get a Free Quote</a>
+<a href="#quote" id="float-quote">📋 Request a Quote</a>
 
 
 <!-- ══════════════════════════════════════════════════════════════════
@@ -57,14 +57,13 @@
       <li><a href="#about">About</a></li>
       <li><a href="#services">Services</a></li>
       <li><a href="#projects">Projects</a></li>
-      <li><a href="#faq">FAQ</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
 
     <!-- Desktop CTA + hamburger -->
     <div class="nav-cta">
       <a href="#" class="nav-phone" data-phone="icon">📞 (626) 388-6790</a>
-      <a href="#quote" class="btn btn-primary btn-sm">Free Quote</a>
+      <a href="#quote" class="btn btn-primary btn-sm">Request a Quote</a>
       <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
@@ -77,7 +76,6 @@
     <a href="#about"    onclick="closeMobile()">About</a>
     <a href="#services" onclick="closeMobile()">Services</a>
     <a href="#projects" onclick="closeMobile()">Projects</a>
-    <a href="#faq"      onclick="closeMobile()">FAQ</a>
     <a href="#contact"  onclick="closeMobile()">Contact</a>
     <a href="#quote"    onclick="closeMobile()" class="mobile-quote-link">Request a Quote →</a>
     <a href="#" class="mobile-phone" data-phone="icon">📞 (626) 388-6790</a>
@@ -142,7 +140,7 @@
         <p>From foundations and flatwork to ADA-compliant improvements and decorative concrete, we bring the same standard of precision and professionalism to every job—whether it's a commercial tenant improvement or a residential driveway.</p>
         <div class="certs">
           <div class="cert-badge"><span class="icon">🏛️</span> CA Licensed General Engineering Contractor</div>
-          <div class="cert-badge"><span class="icon">🛡️</span> Fully Insured &amp; Bonded</div>
+          <div class="cert-badge"><span class="icon">🛡️</span> Fully Insured</div>
           <div class="cert-badge"><span class="icon">⭐</span> ADA Compliance Specialist</div>
           <div class="cert-badge"><span class="icon">🤝</span> GC Preferred Subcontractor</div>
         </div>
@@ -178,7 +176,7 @@
       <div class="why-card">
         <div class="why-icon">📋</div>
         <h3>Licensed &amp; Insured</h3>
-        <p>MAC Contracting is a fully licensed California contractor, bonded and insured. Hire with confidence knowing your project and property are protected.</p>
+        <p>MAC Contracting is a fully licensed and insured California contractor. Hire with confidence knowing your project and property are protected.</p>
       </div>
 
       <div class="why-card">
@@ -230,7 +228,7 @@
         </div>
         <div class="project-info">
           <h3>Commercial Foundation &amp; Curb</h3>
-          <div class="project-meta">Los Angeles County &nbsp;·&nbsp; New Construction</div>
+          <div class="project-meta">New Construction</div>
           <p>Foundation formwork, curb and gutter installation for a new commercial retail development. Coordinated with GC on phased site access.</p>
         </div>
       </div>
@@ -242,7 +240,7 @@
         </div>
         <div class="project-info">
           <h3>ADA Ramp &amp; Accessible Walkway</h3>
-          <div class="project-meta">Los Angeles County &nbsp;·&nbsp; ADA Improvements</div>
+          <div class="project-meta">ADA Improvements</div>
           <p>Full ADA-compliant pedestrian access upgrade including detectable warning surfaces, curb transitions, and accessible pathway installation.</p>
         </div>
       </div>
@@ -254,7 +252,7 @@
         </div>
         <div class="project-info">
           <h3>Commercial Site – Flatwork &amp; Parking</h3>
-          <div class="project-meta">Los Angeles County &nbsp;·&nbsp; Site Work</div>
+          <div class="project-meta">Site Work</div>
           <p>Concrete flatwork, accessible parking installation, and site concrete for a high-traffic commercial retail location.</p>
         </div>
       </div>
@@ -454,82 +452,77 @@
 
       <div class="project-card" data-cat="foundation commercial">
         <div class="project-img"><img src="images/project-01.jpg" alt="Foundation formwork and rebar"><span class="project-tag">Foundation</span></div>
-        <div class="project-info"><h3>Foundation Formwork</h3><div class="project-meta">Los Angeles County &nbsp;·&nbsp; New Construction</div><p>Continuous footing and stem wall formwork for a commercial development. Rebar placement and multi-pour sequencing.</p></div>
+        <div class="project-info"><h3>Foundation Formwork</h3><div class="project-meta">New Construction</div><p>Continuous footing and stem wall formwork for a commercial development. Rebar placement and multi-pour sequencing.</p></div>
       </div>
 
       <div class="project-card" data-cat="ada commercial">
         <div class="project-img"><img src="images/project-02.jpg" alt="ADA curb and sidewalk installation"><span class="project-tag">ADA / Curb Work</span></div>
-        <div class="project-info"><h3>ADA Curb &amp; Sidewalk Installation</h3><div class="project-meta">Los Angeles County &nbsp;·&nbsp; ADA Improvements</div><p>New ADA-compliant curb, sidewalk, and accessible route installed along a commercial corridor.</p></div>
+        <div class="project-info"><h3>ADA Curb &amp; Sidewalk Installation</h3><div class="project-meta">ADA Improvements</div><p>New ADA-compliant curb, sidewalk, and accessible route installed along a commercial corridor.</p></div>
       </div>
 
       <div class="project-card" data-cat="commercial foundation">
         <div class="project-img"><img src="images/project-03.jpg" alt="Commercial new construction site"><span class="project-tag">Commercial</span></div>
-        <div class="project-info"><h3>New Commercial Site – Curb &amp; Grade</h3><div class="project-meta">Los Angeles County &nbsp;·&nbsp; New Construction</div><p>Curb, flatwork, and site concrete for a new commercial development under construction. Full-scope concrete subcontract.</p></div>
+        <div class="project-info"><h3>New Commercial Site – Curb &amp; Grade</h3><div class="project-meta">New Construction</div><p>Curb, flatwork, and site concrete for a new commercial development under construction. Full-scope concrete subcontract.</p></div>
       </div>
 
       <div class="project-card" data-cat="commercial ada">
         <div class="project-img"><img src="images/project-04.jpg" alt="Commercial flatwork in progress"><span class="project-tag">Site Concrete</span></div>
-        <div class="project-info"><h3>Commercial Site Flatwork</h3><div class="project-meta">Los Angeles County &nbsp;·&nbsp; Commercial</div><p>Sub-base preparation and poured concrete flatwork for a commercial site, coordinating with equipment operators and GC.</p></div>
+        <div class="project-info"><h3>Commercial Site Flatwork</h3><div class="project-meta">Commercial</div><p>Sub-base preparation and poured concrete flatwork for a commercial site, coordinating with equipment operators and GC.</p></div>
       </div>
 
       <div class="project-card" data-cat="commercial ada">
         <div class="project-img"><img src="images/project-05.jpg" alt="Commercial parking area concrete"><span class="project-tag">Commercial Flatwork</span></div>
-        <div class="project-info"><h3>Commercial Parking &amp; Site Concrete</h3><div class="project-meta">Los Angeles County &nbsp;·&nbsp; Flatwork</div><p>Parking area concrete, curb island, and accessible route installation for a high-traffic commercial location.</p></div>
+        <div class="project-info"><h3>Commercial Parking &amp; Site Concrete</h3><div class="project-meta">Flatwork</div><p>Parking area concrete, curb island, and accessible route installation for a high-traffic commercial location.</p></div>
       </div>
 
       <div class="project-card" data-cat="ada commercial">
         <div class="project-img"><img src="images/project-06.jpg" alt="Curb and gutter reinforced work"><span class="project-tag">Curb &amp; Gutter</span></div>
-        <div class="project-info"><h3>Curb, Gutter &amp; Flatwork</h3><div class="project-meta">Los Angeles County &nbsp;·&nbsp; Commercial</div><p>New curb, gutter, and sidewalk installation with reinforced mesh subgrade preparation for commercial frontage.</p></div>
+        <div class="project-info"><h3>Curb, Gutter &amp; Flatwork</h3><div class="project-meta">Commercial</div><p>New curb, gutter, and sidewalk installation with reinforced mesh subgrade preparation for commercial frontage.</p></div>
       </div>
 
       <div class="project-card" data-cat="ada commercial">
         <div class="project-img"><img src="images/project-07.jpg" alt="Completed ADA access ramp with detectable warning surfaces"><span class="project-tag">ADA Completed</span></div>
-        <div class="project-info"><h3>Completed ADA Access Route</h3><div class="project-meta">Los Angeles County &nbsp;·&nbsp; ADA Improvements</div><p>Final completed ADA ramp and walkway with detectable warning surfaces — compliant, clean, and durable.</p></div>
+        <div class="project-info"><h3>Completed ADA Access Route</h3><div class="project-meta">ADA Improvements</div><p>Final completed ADA ramp and walkway with detectable warning surfaces — compliant, clean, and durable.</p></div>
       </div>
 
       <div class="project-card" data-cat="commercial ada">
-        <div class="project-img"><img src="images/project-08.jpg" alt="Commercial concrete driveway approach"><span class="project-tag">Commercial Driveway</span></div>
-        <div class="project-info"><h3>Commercial Approach &amp; Drive Aisle</h3><div class="project-meta">Los Angeles County &nbsp;·&nbsp; Commercial</div><p>Wide concrete drive aisle and accessible approach at a commercial building with architectural curb transitions.</p></div>
+        <div class="project-img"><img src="images/project-08.jpg" alt="Commercial concrete drive-thru approach"><span class="project-tag">Commercial Drive-thru</span></div>
+        <div class="project-info"><h3>Commercial Approach &amp; Drive Aisle</h3><div class="project-meta">Commercial</div><p>Wide concrete drive aisle and accessible approach at a commercial building with architectural curb transitions.</p></div>
       </div>
 
       <div class="project-card" data-cat="commercial ada">
         <div class="project-img"><img src="images/project-09.jpg" alt="Completed commercial site concrete - Starbucks"><span class="project-tag">Site Concrete</span></div>
-        <div class="project-info"><h3>Commercial Site Concrete</h3><div class="project-meta">Los Angeles County &nbsp;·&nbsp; Tenant Improvement</div><p>Full site concrete scope for a commercial drive-through development including curb, sidewalk, flatwork, and ADA ramp systems.</p></div>
+        <div class="project-info"><h3>Commercial Site Concrete</h3><div class="project-meta">Tenant Improvement</div><p>Full site concrete scope for a commercial drive-through development including curb, sidewalk, flatwork, and ADA ramp systems.</p></div>
       </div>
 
       <div class="project-card" data-cat="ada commercial">
         <div class="project-img"><img src="images/project-10.jpg" alt="ADA accessible ramp with galvanized handrail"><span class="project-tag">ADA Ramp</span></div>
-        <div class="project-info"><h3>ADA Accessible Ramp with Handrail</h3><div class="project-meta">Los Angeles County &nbsp;·&nbsp; ADA</div><p>Sloped accessible ramp with galvanized handrail and DWS panels, constructed to current ADA and CBC standards.</p></div>
+        <div class="project-info"><h3>ADA Accessible Ramp with Handrail</h3><div class="project-meta">ADA</div><p>Sloped accessible ramp with galvanized handrail and DWS panels, constructed to current ADA and CBC standards.</p></div>
       </div>
 
       <div class="project-card" data-cat="commercial ada repair">
         <div class="project-img"><img src="images/project-11.jpg" alt="Complete commercial drive-through site overview"><span class="project-tag">Commercial Site</span></div>
-        <div class="project-info"><h3>Drive-Through – Complete Site</h3><div class="project-meta">Los Angeles County &nbsp;·&nbsp; New Construction</div><p>Complete concrete site scope including parking, curb, drive-through lane, flatwork, and accessible features.</p></div>
+        <div class="project-info"><h3>Drive-Through – Complete Site</h3><div class="project-meta">New Construction</div><p>Complete concrete site scope including parking, curb, drive-through lane, flatwork, and accessible features.</p></div>
       </div>
 
       <div class="project-card" data-cat="commercial repair">
         <div class="project-img"><img src="images/project-12.jpg" alt="Completed commercial parking lot with striping"><span class="project-tag">Paving &amp; Striping</span></div>
-        <div class="project-info"><h3>Commercial Parking &amp; Striping</h3><div class="project-meta">Los Angeles County &nbsp;·&nbsp; Commercial Flatwork</div><p>Completed commercial parking area with drive-through concrete approach, ADA stalls, and parking lot markings.</p></div>
+        <div class="project-info"><h3>Commercial Parking &amp; Striping</h3><div class="project-meta">Commercial Flatwork</div><p>Completed commercial parking area with drive-through concrete approach, ADA stalls, and parking lot markings.</p></div>
       </div>
 
       <div class="project-card" data-cat="commercial ada repair">
         <div class="project-img"><img src="images/project-13.jpg" alt="ADA parking stall with blue striping"><span class="project-tag">ADA Parking</span></div>
-        <div class="project-info"><h3>ADA Parking &amp; Accessible Striping</h3><div class="project-meta">Los Angeles County &nbsp;·&nbsp; ADA Compliance</div><p>ADA-designated parking stalls with proper striping, signage anchors, and detectable warning approach panels.</p></div>
-      </div>
-
-      <div class="project-card" data-cat="ada commercial">
-        <div class="project-img"><img src="images/project-14.jpg" alt="Wide commercial sidewalk along street frontage"><span class="project-tag">Sidewalk</span></div>
-        <div class="project-info"><h3>Commercial Sidewalk</h3><div class="project-meta">Los Angeles County &nbsp;·&nbsp; Flatwork</div><p>Wide public-facing sidewalk and landscape curb construction along a commercial property street frontage.</p></div>
+        <div class="project-info"><h3>ADA Parking &amp; Accessible Striping</h3><div class="project-meta">ADA Compliance</div><p>ADA-designated parking stalls with proper striping, signage anchors, and detectable warning approach panels.</p></div>
       </div>
 
       <div class="project-card" data-cat="repair commercial ada">
         <div class="project-img"><img src="images/project-02.jpg" alt="Medical office complex ADA access improvements"><span class="project-tag">ADA / Repair</span></div>
-        <div class="project-info"><h3>Medical Office – ADA Upgrade</h3><div class="project-meta">Riverside County &nbsp;·&nbsp; ADA Compliance</div><p>ADA access improvements for a medical office complex including ramp, DWS, and parking lot markings.</p></div>
+        <div class="project-info"><h3>Medical Office – ADA Upgrade</h3><div class="project-meta">ADA Compliance</div><p>ADA access improvements for a medical office complex including ramp, DWS, and parking lot markings.</p></div>
       </div>
 
       <div class="project-card" data-cat="residential">
         <div class="project-img"><img src="images/project-04.jpg" alt="Residential concrete driveway with smooth broom finish"><span class="project-tag">Residential</span></div>
-        <div class="project-info"><h3>Residential Concrete Driveway</h3><div class="project-meta">San Bernardino County &nbsp;·&nbsp; Residential Flatwork</div><p>Full replacement residential driveway pour with smooth broom finish, control joints, and proper sub-base compaction.</p></div>
+        <div class="project-info"><h3>Residential Concrete Driveway</h3><div class="project-meta">Residential Flatwork</div><p>Full replacement residential driveway pour with smooth broom finish, control joints, and proper sub-base compaction.</p></div>
       </div>
 
     </div><!-- /projects-grid -->
@@ -549,7 +542,7 @@
     </div>
     <div class="about-full-grid">
 
-      <!-- Left: copy + mission + credentials -->
+      <!-- Left: copy + mission -->
       <div class="about-full-left">
         <p class="about-lead">MAC Contracting was founded with a single goal: deliver concrete and masonry work that outlasts the competition—in quality and in longevity. Based in Azusa, California, we've spent over a decade building trust with general contractors, developers, property managers, and homeowners throughout Southern California.</p>
         <p>We specialize in commercial and residential concrete including foundations, flatwork, ADA improvements, curb and gutter, site preparation, masonry, sealing, and repair. Whether you're breaking ground on a new commercial project or need a cracked driveway replaced, we bring the same crew and commitment to every job.</p>
@@ -558,28 +551,9 @@
           "Our mission is simple: show up, work hard, and leave every site better than we found it. No shortcuts. No excuses. Just concrete work done right."
         </blockquote>
 
-        <h3 class="cred-heading">Licenses &amp; Credentials</h3>
-        <div class="license-grid">
-          <div class="license-item">
-            <div class="li-label">CA Contractor License</div>
-            <div class="li-val" data-license>#[CSLB License Number]</div>
-          </div>
-          <div class="license-item">
-            <div class="li-label">License Class</div>
-            <div class="li-val">Class A / Class C8</div>
-          </div>
-          <div class="license-item">
-            <div class="li-label">Bonding</div>
-            <div class="li-val">Fully Bonded</div>
-          </div>
-          <div class="license-item">
-            <div class="li-label">Insurance</div>
-            <div class="li-val">General Liability + Workers Comp</div>
-          </div>
-        </div>
       </div>
 
-      <!-- Right: service areas + map -->
+      <!-- Right: service areas -->
       <div class="about-full-right">
         <h3 class="area-heading">Service Areas</h3>
         <p>We serve all of Southern California with no travel surcharge for most jobs:</p>
@@ -600,9 +574,6 @@
           <span class="area-tag">Pasadena</span>
           <span class="area-tag">Monrovia</span>
         </div>
-
-        <!-- Map injected by script.js from SITE_CONFIG.GOOGLE_MAPS_EMBED_URL -->
-        <div class="map-placeholder" data-map aria-label="Map showing Azusa, CA service area"></div>
 
         <div class="about-actions">
           <a href="#quote" class="btn btn-primary">Request a Quote</a>
@@ -626,9 +597,7 @@
 
       <!-- Left: contact details -->
       <div class="quote-left">
-        <span class="section-label section-label--yellow">Free Estimates</span>
-        <div class="divider"></div>
-        <h2>Request a Free Quote</h2>
+        <h2>Request a Quote</h2>
         <p>Tell us about your project and we'll get back to you within one business day. No obligation, no pressure—just straight answers and honest pricing.</p>
 
         <div class="contact-detail">
@@ -797,65 +766,6 @@
 
 
 <!-- ══════════════════════════════════════════════════════════════════
-  FAQ ACCORDION
-  To add a question: copy one .faq-item block.
-════════════════════════════════════════════════════════════════════ -->
-<section id="faq">
-  <div class="container">
-    <div class="section-header section-header--center">
-      <span class="section-label section-label--center">Frequently Asked Questions</span>
-      <div class="divider divider--center"></div>
-      <h2>Common Questions</h2>
-      <p>Answers to what most customers ask before getting started with us.</p>
-    </div>
-    <div class="faq-list">
-
-      <div class="faq-item">
-        <div class="faq-q"><span>Do you offer free estimates?</span><div class="faq-icon">+</div></div>
-        <div class="faq-a">Yes. We provide free, no-obligation estimates for all projects. Fill out our quote request form or give us a call and we'll schedule a site visit to assess your project and provide a detailed written estimate.</div>
-      </div>
-
-      <div class="faq-item">
-        <div class="faq-q"><span>Do you handle both commercial and residential projects?</span><div class="faq-icon">+</div></div>
-        <div class="faq-a">Absolutely. We work on everything from residential driveways and patio slabs to large-scale commercial foundations, tenant improvements, and public works projects. No project is too small or too large.</div>
-      </div>
-
-      <div class="faq-item">
-        <div class="faq-q"><span>Are you licensed and insured?</span><div class="faq-icon">+</div></div>
-        <div class="faq-a">Yes. MAC Contracting is a licensed California General Engineering Contractor with a valid CSLB license. We carry full general liability insurance and workers' compensation coverage. Certificates of Insurance are available upon request.</div>
-      </div>
-
-      <div class="faq-item">
-        <div class="faq-q"><span>What areas do you serve?</span><div class="faq-icon">+</div></div>
-        <div class="faq-a">We serve all of Los Angeles County, Riverside County, San Bernardino County, and Orange County. Our crew is based in Azusa, CA, putting us in an ideal location to reach projects across the Inland Empire, San Gabriel Valley, and surrounding areas.</div>
-      </div>
-
-      <div class="faq-item">
-        <div class="faq-q"><span>How soon can you start a project?</span><div class="faq-icon">+</div></div>
-        <div class="faq-a">Start dates depend on project scope and our current schedule. For small to mid-size jobs, we can often begin within 1–3 weeks of contract execution. Contact us to discuss your specific timeline.</div>
-      </div>
-
-      <div class="faq-item">
-        <div class="faq-q"><span>Can I upload photos when requesting a quote?</span><div class="faq-icon">+</div></div>
-        <div class="faq-a">Yes. You can send photos to our email at <a href="#" data-email>info@maccontracting.com</a> along with your project details. Photos of existing conditions help us provide a more accurate estimate.</div>
-      </div>
-
-      <div class="faq-item">
-        <div class="faq-q"><span>Do you work with general contractors?</span><div class="faq-icon">+</div></div>
-        <div class="faq-a">Yes, and it's a large part of our business. MAC Contracting is a preferred concrete subcontractor for general contractors and developers across Southern California. We understand GC workflows, scheduling demands, and documentation requirements.</div>
-      </div>
-
-      <div class="faq-item">
-        <div class="faq-q"><span>What types of concrete work do you specialize in?</span><div class="faq-icon">+</div></div>
-        <div class="faq-a">Our specialties include commercial concrete, residential flatwork, foundations and footings, ADA-compliant site improvements, curb and gutter, driveways and parking areas, masonry and CMU block work, concrete repair and resurfacing, and sealing/resealing. If it involves concrete or masonry, we do it.</div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-<!-- ══════════════════════════════════════════════════════════════════
   CTA BANNER
 ════════════════════════════════════════════════════════════════════ -->
 <div class="cta-banner">
@@ -863,9 +773,9 @@
     <div class="cta-inner">
       <div>
         <h2>Ready to Start Your<br>Next Project?</h2>
-        <p>Get a free, detailed estimate within one business day. We're easy to reach.</p>
+        <p>Tell us about your project and we'll get back to you within one business day.</p>
       </div>
-      <a href="#quote" class="btn-cta">Get Your Free Quote →</a>
+      <a href="#quote" class="btn-cta">Request a Quote →</a>
     </div>
   </div>
 </div>
@@ -883,7 +793,7 @@
     </div>
     <div class="contact-grid">
 
-      <!-- Left: info + map -->
+      <!-- Left: info -->
       <div class="contact-left">
         <h2>We're Here<br>When You Need Us</h2>
 
@@ -917,8 +827,6 @@
           </div>
         </div>
 
-        <!-- Map injected by script.js -->
-        <div class="map-placeholder" data-map aria-label="Map of Azusa CA service area"></div>
       </div>
 
       <!-- Right: contact form -->
@@ -1009,7 +917,6 @@
         <ul>
           <li><a href="#about">About Us</a></li>
           <li><a href="#projects">Project Gallery</a></li>
-          <li><a href="#faq">FAQ</a></li>
           <li><a href="#contact">Contact</a></li>
           <li><a href="#quote">Request a Quote</a></li>
           <li><a href="#" data-yelp target="_blank" rel="noopener">Yelp Reviews</a></li>

@@ -1,6 +1,6 @@
 /* ═══════════════════════════════════════════════════════════════════
  *  MAC CONTRACTING — MAIN SCRIPT
- *  All site behaviour: navigation, forms, gallery filters, FAQ, etc.
+ *  All site behaviour: navigation, forms, gallery filters, etc.
  *  Form submissions use Formspree — configure endpoints in config.js
  * ═══════════════════════════════════════════════════════════════════ */
 
@@ -15,10 +15,8 @@ document.addEventListener('DOMContentLoaded', () => {
   initSmoothScroll();
   initServiceCards();
   initProjectFilter();
-  initFAQ();
   initQuoteForm();
   initContactForm();
-  initMapEmbed();
 
 });
 
@@ -31,8 +29,8 @@ function initDynamicContent() {
   // Phone links
   document.querySelectorAll('[data-phone]').forEach(el => {
     el.href    = c.phoneLink;
-    el.textContent = el.dataset.phone === 'icon'
-      ? '📞 ' + c.phone
+    el.textContent = el.dataset.phone === 'call' ? '📞 Call Now'
+      : el.dataset.phone === 'icon' ? '📞 ' + c.phone
       : c.phone;
   });
 
@@ -52,11 +50,11 @@ function initDynamicContent() {
     el.href = c.yelpUrl;
   });
 
-  // Footer copyright year + license
+  // Footer copyright year
   document.querySelectorAll('[data-copyright]').forEach(el => {
     el.textContent =
       '© ' + new Date().getFullYear() + ' ' + c.company +
-      '. All rights reserved.  ·  CA CSLB Lic. ' + c.license + '  ·  ' + c.city + ', ' + c.state;
+      '. All rights reserved.  ·  ' + c.city + ', ' + c.state;
   });
 
   // Business hours list
@@ -74,7 +72,7 @@ function initNavigation() {
   const hamburger  = document.getElementById('hamburger');
   const mobileMenu = document.getElementById('mobile-menu');
   const nav        = document.getElementById('nav');
-  const sections   = document.querySelectorAll('section[id], [id="faq"]');
+  const sections   = document.querySelectorAll('section[id]');
   const navLinks   = document.querySelectorAll('.nav-links a');
 
   // Hamburger toggle
@@ -156,22 +154,6 @@ function filterProjects(cat, activeBtn) {
     const cats = card.dataset.cat || '';
     card.style.display = (cat === 'all' || cats.includes(cat)) ? '' : 'none';
   });
-}
-
-/* ────────────────────────────────────────────────────────────────
- *  FAQ ACCORDION
- * ──────────────────────────────────────────────────────────────── */
-function initFAQ() {
-  document.querySelectorAll('.faq-q').forEach(q => {
-    q.addEventListener('click', () => toggleFAQ(q));
-  });
-}
-
-function toggleFAQ(el) {
-  const item    = el.closest('.faq-item');
-  const wasOpen = item.classList.contains('open');
-  document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
-  if (!wasOpen) item.classList.add('open');
 }
 
 /* ────────────────────────────────────────────────────────────────
@@ -281,16 +263,3 @@ function initContactForm() {
   });
 }
 
-/* ────────────────────────────────────────────────────────────────
- *  GOOGLE MAP EMBED — injected from config
- * ──────────────────────────────────────────────────────────────── */
-function initMapEmbed() {
-  document.querySelectorAll('[data-map]').forEach(el => {
-    el.innerHTML = `<iframe
-      src="${SITE_CONFIG.GOOGLE_MAPS_EMBED_URL}"
-      width="100%" height="100%" style="border:0;"
-      allowfullscreen="" loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade">
-    </iframe>`;
-  });
-}
