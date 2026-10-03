@@ -17,7 +17,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initProjectFilter();
   initQuoteForm();
   initContactForm();
-  initMapEmbed();
 
 });
 
@@ -264,16 +263,3 @@ function initContactForm() {
   });
 }
 
-/* ────────────────────────────────────────────────────────────────
- *  GOOGLE MAP EMBED — injected from config
- * ──────────────────────────────────────────────────────────────── */
-function initMapEmbed() {
-  document.querySelectorAll('[data-map]').forEach(el => {
-    el.innerHTML = `<iframe
-      src="${SITE_CONFIG.GOOGLE_MAPS_EMBED_URL}"
-      width="100%" height="100%" style="border:0;"
-      allowfullscreen="" loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade">
-    </iframe>`;
-  });
-}
