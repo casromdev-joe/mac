@@ -742,7 +742,7 @@
     </div>
     <div class="contact-grid">
 
-      <!-- Left: info -->
+      <!-- Contact info + after-hours -->
       <div class="contact-left">
         <h2>We're Here<br>When You Need Us</h2>
 
@@ -761,59 +761,12 @@
           </div>
         </div>
         <div class="contact-info-item">
-          <div class="ci-icon">📍</div>
-          <div class="ci-text">
-            <div class="ci-label">Address</div>
-            <div class="ci-val" data-address>Azusa, CA 91702</div>
-          </div>
-        </div>
-        <div class="contact-info-item">
           <div class="ci-icon">🕐</div>
           <div class="ci-text">
             <div class="ci-label">Business Hours</div>
             <!-- Populated by script.js -->
             <div class="ci-val" data-hours></div>
           </div>
-        </div>
-
-      </div>
-
-      <!-- Right: contact form -->
-      <div class="contact-right">
-        <div class="quote-form">
-          <h3 class="form-heading">Send Us a Message</h3>
-          <!-- Formspree endpoint set in config.js → FORMSPREE_CONTACT_ENDPOINT -->
-          <form id="contact-form">
-            <div class="form-row">
-              <div class="form-group">
-                <label for="c-name">Name</label>
-                <input id="c-name" type="text" name="name" placeholder="Your name" required autocomplete="name">
-              </div>
-              <div class="form-group">
-                <label for="c-phone">Phone</label>
-                <input id="c-phone" type="tel" name="phone" placeholder="(123) 456-7890" autocomplete="tel">
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="c-email">Email</label>
-              <input id="c-email" type="email" name="email" placeholder="you@example.com" required autocomplete="email">
-            </div>
-            <div class="form-group">
-              <label for="c-subject">Subject</label>
-              <select id="c-subject" name="subject">
-                <option>General Inquiry</option>
-                <option>Request a Quote</option>
-                <option>Existing Project</option>
-                <option>Subcontractor Inquiry</option>
-                <option>Other</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="c-message">Message</label>
-              <textarea id="c-message" name="message" placeholder="How can we help you?" class="tall-textarea"></textarea>
-            </div>
-            <button type="submit" class="btn btn-dark btn-full">Send Message →</button>
-          </form>
         </div>
 
         <div class="after-hours-box">
@@ -823,6 +776,7 @@
           </div>
           <a href="#" class="btn btn-primary" data-phone="icon">📞 Call Now</a>
         </div>
+
       </div>
 
     </div>

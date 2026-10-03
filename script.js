@@ -16,7 +16,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initServiceCards();
   initGalleryToggle();
   initQuoteForm();
-  initContactForm();
 
 });
 
@@ -38,11 +37,6 @@ function initDynamicContent() {
   document.querySelectorAll('[data-email]').forEach(el => {
     el.href        = 'mailto:' + c.email;
     el.textContent = c.email;
-  });
-
-  // Address
-  document.querySelectorAll('[data-address]').forEach(el => {
-    el.textContent = c.streetAddress + ', ' + c.city + ', ' + c.state + ' ' + c.zip;
   });
 
   // Footer copyright year
@@ -222,43 +216,5 @@ function showSuccess(wrapId, successId) {
   const success = document.getElementById(successId);
   if (wrap)    wrap.style.display    = 'none';
   if (success) success.style.display = 'block';
-}
-
-/* ────────────────────────────────────────────────────────────────
- *  CONTACT FORM — POSTs to Formspree → Gmail
- * ──────────────────────────────────────────────────────────────── */
-function initContactForm() {
-  const form = document.getElementById('contact-form');
-  if (!form) return;
-
-  form.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    const btn = form.querySelector('button[type="submit"]');
-    btn.textContent = 'Sending…';
-    btn.disabled = true;
-
-    try {
-      const res = await fetch(SITE_CONFIG.FORMSPREE_CONTACT_ENDPOINT, {
-        method: 'POST',
-        body:   new FormData(form),
-        headers: { 'Accept': 'application/json' },
-      });
-
-      if (res.ok) {
-        form.parentElement.innerHTML = `
-          <div class="form-success-inner">
-            <div class="check">✅</div>
-            <h3>Message Sent!</h3>
-            <p>Thanks for reaching out. We'll be in touch within one business day.</p>
-          </div>`;
-      } else {
-        throw new Error();
-      }
-    } catch {
-      btn.textContent = 'Send Message →';
-      btn.disabled = false;
-      alert('Message could not be sent. Please call us at ' + SITE_CONFIG.phone);
-    }
-  });
 }
 
