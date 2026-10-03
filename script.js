@@ -1,6 +1,6 @@
 /* ═══════════════════════════════════════════════════════════════════
  *  MAC CONTRACTING — MAIN SCRIPT
- *  All site behaviour: navigation, forms, gallery filters, etc.
+ *  All site behaviour: navigation, forms, gallery toggle, etc.
  *  Form submissions use Formspree — configure endpoints in config.js
  * ═══════════════════════════════════════════════════════════════════ */
 
@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initNavigation();
   initSmoothScroll();
   initServiceCards();
-  initProjectFilter();
+  initGalleryToggle();
   initQuoteForm();
   initContactForm();
 
@@ -43,11 +43,6 @@ function initDynamicContent() {
   // Address
   document.querySelectorAll('[data-address]').forEach(el => {
     el.textContent = c.streetAddress + ', ' + c.city + ', ' + c.state + ' ' + c.zip;
-  });
-
-  // Yelp links
-  document.querySelectorAll('[data-yelp]').forEach(el => {
-    el.href = c.yelpUrl;
   });
 
   // Footer copyright year
@@ -139,21 +134,25 @@ function toggleService(card) {
 }
 
 /* ────────────────────────────────────────────────────────────────
- *  PROJECT GALLERY FILTERS
+ *  PROJECT GALLERY — collapsible panel
  * ──────────────────────────────────────────────────────────────── */
-function initProjectFilter() {
-  document.querySelectorAll('.filter-btn').forEach(btn => {
-    btn.addEventListener('click', () => filterProjects(btn.dataset.filter, btn));
-  });
-}
+function initGalleryToggle() {
+  const btn   = document.getElementById('gallery-toggle');
+  const panel = document.getElementById('projects-panel');
+  if (!btn || !panel) return;
 
-function filterProjects(cat, activeBtn) {
-  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-  activeBtn.classList.add('active');
-  document.querySelectorAll('.project-card').forEach(card => {
-    const cats = card.dataset.cat || '';
-    card.style.display = (cat === 'all' || cats.includes(cat)) ? '' : 'none';
+  const setOpen = open => {
+    panel.hidden = !open;
+    btn.setAttribute('aria-expanded', String(open));
+    btn.textContent = open ? 'Hide Projects ▴' : 'Show Projects ▾';
+  };
+  btn.addEventListener('click', () => setOpen(panel.hidden));
+
+  // Links to #projects (e.g. "View Our Projects") open the gallery
+  document.querySelectorAll('a[href="#projects"]').forEach(a => {
+    a.addEventListener('click', () => setOpen(true));
   });
+  if (location.hash === '#projects') setOpen(true);
 }
 
 /* ────────────────────────────────────────────────────────────────

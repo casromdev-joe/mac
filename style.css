@@ -364,6 +364,8 @@ button { cursor: pointer; border: none; font-family: 'Inter', sans-serif; }
       overflow: hidden;
       height: 420px;
     }
+    .about-img-wrap--logo { background: #000; }
+    .about-img-wrap--logo img { object-fit: contain; padding: 40px; }
     .about-img-wrap::after {
       content: '';
       position: absolute;
@@ -546,28 +548,18 @@ button { cursor: pointer; border: none; font-family: 'Inter', sans-serif; }
     #projects {
       background: var(--offwhite);
     }
-    .filter-bar {
+    .gallery-toggle { margin-bottom: 32px; }
+    .projects-panel[hidden] { display: none; }
+    .project-img--placeholder {
       display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-bottom: 40px;
-    }
-    .filter-btn {
-      padding: 9px 20px;
-      font-size: 13px;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      border-radius: 2px;
-      background: var(--white);
+      align-items: center;
+      justify-content: center;
+      background: repeating-linear-gradient(45deg, var(--ltgray), var(--ltgray) 12px, #d4d8dc 12px, #d4d8dc 24px);
       color: var(--midgray);
-      border: 1px solid var(--ltgray);
-      transition: all var(--transition);
-    }
-    .filter-btn:hover, .filter-btn.active {
-      background: var(--charcoal);
-      color: var(--white);
-      border-color: var(--charcoal);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
     }
     .projects-grid {
       display: grid;
@@ -946,19 +938,6 @@ button { cursor: pointer; border: none; font-family: 'Inter', sans-serif; }
       gap: 12px;
     }
     .footer-bottom a { color: var(--orange); }
-    .yelp-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: #d32323;
-      color: var(--white);
-      padding: 8px 16px;
-      border-radius: var(--radius);
-      font-size: 13px;
-      font-weight: 600;
-      transition: all var(--transition);
-    }
-    .yelp-link:hover { background: #b01d1d; }
 
     /* ===== FLOAT BUTTON ===== */
     #float-quote {
@@ -1079,16 +1058,12 @@ button { cursor: pointer; border: none; font-family: 'Inter', sans-serif; }
 /* Mobile quote link in hamburger menu */
 .mobile-quote-link { color: var(--orange) !important; font-weight: 700; }
 
-/* Footer social row */
-.footer-social { margin-top: 20px; display: flex; gap: 12px; flex-wrap: wrap; }
 .footer-bottom-links { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; }
 .footer-bottom-links a { color: var(--orange); }
 
 /* Nav phone – data-phone populated by JS, needs initial text color */
 .nav-phone { color: var(--yellow); font-size: 13px; font-weight: 600; letter-spacing: 0.03em; display: flex; align-items: center; gap: 6px; }
 
-/* Filter buttons now use data-filter (JS reads data-filter attr) */
-/* No CSS change needed – .filter-btn class still applies */
 
 /* ─── MOBILE OPTIMIZATION ───────────────────────────────────────────
    Kept at the end of the file so it overrides the helper rules above.
@@ -1118,16 +1093,13 @@ button { cursor: pointer; border: none; font-family: 'Inter', sans-serif; }
 
   /* Shorter about photo so text appears sooner */
   .about-img-wrap { height: 280px; }
+  .gallery-toggle { width: 100%; justify-content: center; }
   .learn-more-btn { padding: 12px 0; }
 
   /* Headings and section spacing */
   section { padding: 56px 0; }
   h2 { overflow-wrap: break-word; }
 
-  /* Project filters: one swipeable row instead of a wrapped block */
-  .filter-bar { flex-wrap: nowrap; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; margin: 0 -20px 28px; padding: 0 20px 4px; }
-  .filter-bar::-webkit-scrollbar { display: none; }
-  .filter-btn { flex-shrink: 0; min-height: 44px; }
 
   /* Forms: 16px text stops iPhones zooming in on focus; taller tap targets */
   .form-group input, .form-group select, .form-group textarea { font-size: 16px; }
@@ -1137,8 +1109,7 @@ button { cursor: pointer; border: none; font-family: 'Inter', sans-serif; }
   /* Comfortable tap targets for small links */
   .footer-col a, .cd-link { display: inline-block; padding: 6px 0; }
   .footer-col li { margin-bottom: 2px; }
-  .yelp-link { min-height: 44px; display: inline-flex; align-items: center; }
-  .about-actions .btn, .about-actions .yelp-link { flex: 1 1 100%; justify-content: center; text-align: center; }
+  .about-actions .btn { flex: 1 1 100%; justify-content: center; text-align: center; }
   .hours-row { gap: 12px; }
 
   /* Bottom action bar: Call + Request a Quote side by side */

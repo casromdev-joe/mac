@@ -37,9 +37,6 @@ const SITE_CONFIG = {
     { day: 'Sunday',          time: 'Closed'             },
   ],
 
-  // ── SOCIAL / REVIEW LINKS ────────────────────────────────────────────
-  yelpUrl:       'https://www.yelp.com/biz/mac-contracting',
-
   // ── FORM ENDPOINTS (Formspree → delivers to Gmail) ─────────────────
   // See instructions at the top of this file.
   FORMSPREE_QUOTE_ENDPOINT:   'https://formspree.io/f/YOUR_FORM_ID',
