@@ -741,45 +741,6 @@ button { cursor: pointer; border: none; font-family: 'Inter', sans-serif; }
     }
     #form-success p { font-size: 15px; color: var(--midgray); }
 
-    /* ===== ABOUT PAGE SECTION ===== */
-    #about {
-      background: var(--white);
-    }
-    .about-full-grid {
-      display: grid;
-      grid-template-columns: 1.2fr 1fr;
-      gap: 70px;
-      align-items: start;
-    }
-    .mission-block {
-      background: var(--charcoal);
-      color: var(--white);
-      padding: 36px;
-      border-radius: var(--radius);
-      margin-top: 32px;
-      border-left: 4px solid var(--orange);
-    }
-    .mission-block p {
-      font-size: 17px;
-      font-style: italic;
-      line-height: 1.75;
-      color: rgba(255,255,255,0.85);
-    }
-    .service-area-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 16px;
-    }
-    .area-tag {
-      background: var(--charcoal);
-      color: var(--white);
-      padding: 7px 16px;
-      border-radius: 2px;
-      font-size: 13px;
-      font-weight: 600;
-    }
-
     /* ===== CONTACT ===== */
     #contact {
       background: var(--offwhite);
@@ -974,7 +935,7 @@ button { cursor: pointer; border: none; font-family: 'Inter', sans-serif; }
 
     /* ===== RESPONSIVE ===== */
     @media (max-width: 900px) {
-      .about-grid, .about-full-grid, .quote-grid, .contact-grid {
+      .about-grid, .quote-grid, .contact-grid {
         grid-template-columns: 1fr;
         gap: 40px;
       }
@@ -1008,15 +969,6 @@ button { cursor: pointer; border: none; font-family: 'Inter', sans-serif; }
 
 /* Hero section class (replaced inline style="padding:0") */
 .hero-section { height: 100vh; min-height: 600px; position: relative; display: flex; align-items: center; overflow: hidden; padding: 0; }
-
-/* About section CTA row */
-.about-cta { margin-top: 28px; }
-
-/* About full layout helpers */
-.about-lead { font-size: 17px; line-height: 1.75; color: var(--midgray); margin-bottom: 20px; }
-.area-heading { font-size: 24px; font-weight: 800; text-transform: uppercase; margin: 32px 0 16px; }
-.about-actions { display: flex; gap: 12px; margin-top: 24px; flex-wrap: wrap; }
-.about-full-left p { font-size: 16px; line-height: 1.75; color: var(--midgray); margin-bottom: 16px; }
 
 /* Quote form wrapper (needed for show/hide on success) */
 .quote-form-wrap { }
@@ -1099,7 +1051,6 @@ button { cursor: pointer; border: none; font-family: 'Inter', sans-serif; }
   /* Comfortable tap targets for small links */
   .footer-col a, .cd-link { display: inline-block; padding: 6px 0; }
   .footer-col li { margin-bottom: 2px; }
-  .about-actions .btn { flex: 1 1 100%; justify-content: center; text-align: center; }
   .hours-row { gap: 12px; }
 
   /* Bottom action bar: Call + Request a Quote side by side */
