@@ -292,41 +292,6 @@ button { cursor: pointer; border: none; font-family: 'Inter', sans-serif; }
       gap: 14px;
       align-items: center;
     }
-    /* ── Hero stats bar ──
-       Sits inline below the hero buttons — equal tiles, text never wraps. */
-    .hero-stats {
-      display: flex;
-      gap: 1px;
-      background: rgba(255,255,255,0.12);
-      border-radius: var(--radius);
-      overflow: hidden;
-      margin-top: 40px;
-      width: fit-content;
-    }
-    .hero-stat {
-      background: rgba(15,15,15,0.78);
-      backdrop-filter: blur(10px);
-      padding: 18px 32px;
-      text-align: center;
-      min-width: 140px;
-    }
-    .hero-stat .num {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-size: 34px;
-      font-weight: 800;
-      color: var(--orange);
-      line-height: 1;
-      white-space: nowrap;
-    }
-    .hero-stat .lbl {
-      font-size: 11px;
-      color: rgba(255,255,255,0.65);
-      text-transform: uppercase;
-      letter-spacing: 0.12em;
-      margin-top: 5px;
-      white-space: nowrap;
-    }
-
     /* ===== SERVICES STRIP ===== */
     .services-strip {
       background: var(--charcoal);
@@ -1132,7 +1097,6 @@ button { cursor: pointer; border: none; font-family: 'Inter', sans-serif; }
       .footer-grid { grid-template-columns: 1fr 1fr; }
       .nav-links, .nav-phone { display: none; }
       .hamburger { display: flex; }
-      /* hero-stats are inline flow — hide on very small screens only */
       .cta-inner { flex-direction: column; text-align: center; }
     }
     @media (max-width: 600px) {
