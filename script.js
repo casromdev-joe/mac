@@ -65,14 +65,6 @@ function initDynamicContent() {
       .map(h => `<div class="hours-row"><span class="day">${h.day}</span><span>${h.time}</span></div>`)
       .join('');
   });
-
-  // Hero stats
-  const statsWrap = document.querySelector('[data-stats]');
-  if (statsWrap) {
-    statsWrap.innerHTML = c.stats
-      .map(s => `<div class="hero-stat"><div class="num">${s.num}</div><div class="lbl">${s.label}</div></div>`)
-      .join('');
-  }
 }
 
 /* ────────────────────────────────────────────────────────────────

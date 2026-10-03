@@ -44,11 +44,6 @@ const SITE_CONFIG = {
     { day: 'Sunday',          time: 'Closed'             },
   ],
 
-  // ── STATS (hero section) ─────────────────────────────────────────────
-  stats: [
-    { num: '15+',  label: 'Years Experience'   },
-  ],
-
   // ── SOCIAL / REVIEW LINKS ────────────────────────────────────────────
   yelpUrl:       'https://www.yelp.com/biz/mac-contracting',
 
