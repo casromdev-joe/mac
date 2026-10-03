@@ -127,8 +127,8 @@
     <div class="about-grid">
 
       <!-- Photo -->
-      <div class="about-img-wrap">
-        <img src="images/project-11.jpg" alt="MAC Contracting crew at work on a commercial site">
+      <div class="about-img-wrap about-img-wrap--logo">
+        <img src="images/logo.jpg" alt="MAC Contracting logo">
       </div>
 
       <!-- Text -->
@@ -269,7 +269,6 @@
   SERVICES
   To add a service: copy one .service-card block.
   To remove: delete the block.
-  data-cat attribute controls project gallery filtering.
 ════════════════════════════════════════════════════════════════════ -->
 <section id="services">
   <div class="container">
@@ -425,9 +424,12 @@
 
 <!-- ══════════════════════════════════════════════════════════════════
   PROJECT GALLERY
-  · Filter buttons use data-filter attribute (matches data-cat on cards)
-  · To add a project: copy a .project-card block, update image/text/tags
-  · Category slugs: commercial, ada, residential, foundation, repair
+  · Collapsible: the toggle button shows/hides #projects-panel
+  · Holds up to 6 projects. Replace a placeholder card with a real one:
+      <div class="project-card">
+        <div class="project-img"><img src="images/your-photo.jpg" alt="..."><span class="project-tag">Tag</span></div>
+        <div class="project-info"><h3>Title</h3><div class="project-meta">Type</div><p>Description</p></div>
+      </div>
 ════════════════════════════════════════════════════════════════════ -->
 <section id="projects" class="section-concrete">
   <div class="container">
@@ -438,94 +440,43 @@
       <p>Browse completed projects across commercial, residential, and municipal categories throughout Southern California.</p>
     </div>
 
-    <!-- Filter buttons (data-filter must match data-cat values on cards) -->
-    <div class="filter-bar" role="group" aria-label="Filter projects by category">
-      <button class="filter-btn active" data-filter="all">All Projects</button>
-      <button class="filter-btn" data-filter="commercial">Commercial</button>
-      <button class="filter-btn" data-filter="ada">ADA / Flatwork</button>
-      <button class="filter-btn" data-filter="residential">Residential</button>
-      <button class="filter-btn" data-filter="foundation">Foundations</button>
-      <button class="filter-btn" data-filter="repair">Repairs &amp; Sealing</button>
-    </div>
+    <button class="btn btn-dark gallery-toggle" id="gallery-toggle" aria-expanded="false" aria-controls="projects-panel">Show Projects ▾</button>
 
-    <div class="projects-grid" id="projects-grid">
+    <div class="projects-panel" id="projects-panel" hidden>
+      <div class="projects-grid" id="projects-grid">
 
-      <div class="project-card" data-cat="foundation commercial">
-        <div class="project-img"><img src="images/project-01.jpg" alt="Foundation formwork and rebar"><span class="project-tag">Foundation</span></div>
-        <div class="project-info"><h3>Foundation Formwork</h3><div class="project-meta">New Construction</div><p>Continuous footing and stem wall formwork for a commercial development. Rebar placement and multi-pour sequencing.</p></div>
-      </div>
+        <div class="project-card project-card--placeholder">
+          <div class="project-img project-img--placeholder"><span>Photo coming soon</span></div>
+          <div class="project-info"><h3>Project Title</h3><div class="project-meta">Project Type</div><p>Project description coming soon.</p></div>
+        </div>
 
-      <div class="project-card" data-cat="ada commercial">
-        <div class="project-img"><img src="images/project-02.jpg" alt="ADA curb and sidewalk installation"><span class="project-tag">ADA / Curb Work</span></div>
-        <div class="project-info"><h3>ADA Curb &amp; Sidewalk Installation</h3><div class="project-meta">ADA Improvements</div><p>New ADA-compliant curb, sidewalk, and accessible route installed along a commercial corridor.</p></div>
-      </div>
+        <div class="project-card project-card--placeholder">
+          <div class="project-img project-img--placeholder"><span>Photo coming soon</span></div>
+          <div class="project-info"><h3>Project Title</h3><div class="project-meta">Project Type</div><p>Project description coming soon.</p></div>
+        </div>
 
-      <div class="project-card" data-cat="commercial foundation">
-        <div class="project-img"><img src="images/project-03.jpg" alt="Commercial new construction site"><span class="project-tag">Commercial</span></div>
-        <div class="project-info"><h3>New Commercial Site – Curb &amp; Grade</h3><div class="project-meta">New Construction</div><p>Curb, flatwork, and site concrete for a new commercial development under construction. Full-scope concrete subcontract.</p></div>
-      </div>
+        <div class="project-card project-card--placeholder">
+          <div class="project-img project-img--placeholder"><span>Photo coming soon</span></div>
+          <div class="project-info"><h3>Project Title</h3><div class="project-meta">Project Type</div><p>Project description coming soon.</p></div>
+        </div>
 
-      <div class="project-card" data-cat="commercial ada">
-        <div class="project-img"><img src="images/project-04.jpg" alt="Commercial flatwork in progress"><span class="project-tag">Site Concrete</span></div>
-        <div class="project-info"><h3>Commercial Site Flatwork</h3><div class="project-meta">Commercial</div><p>Sub-base preparation and poured concrete flatwork for a commercial site, coordinating with equipment operators and GC.</p></div>
-      </div>
+        <div class="project-card project-card--placeholder">
+          <div class="project-img project-img--placeholder"><span>Photo coming soon</span></div>
+          <div class="project-info"><h3>Project Title</h3><div class="project-meta">Project Type</div><p>Project description coming soon.</p></div>
+        </div>
 
-      <div class="project-card" data-cat="commercial ada">
-        <div class="project-img"><img src="images/project-05.jpg" alt="Commercial parking area concrete"><span class="project-tag">Commercial Flatwork</span></div>
-        <div class="project-info"><h3>Commercial Parking &amp; Site Concrete</h3><div class="project-meta">Flatwork</div><p>Parking area concrete, curb island, and accessible route installation for a high-traffic commercial location.</p></div>
-      </div>
+        <div class="project-card project-card--placeholder">
+          <div class="project-img project-img--placeholder"><span>Photo coming soon</span></div>
+          <div class="project-info"><h3>Project Title</h3><div class="project-meta">Project Type</div><p>Project description coming soon.</p></div>
+        </div>
 
-      <div class="project-card" data-cat="ada commercial">
-        <div class="project-img"><img src="images/project-06.jpg" alt="Curb and gutter reinforced work"><span class="project-tag">Curb &amp; Gutter</span></div>
-        <div class="project-info"><h3>Curb, Gutter &amp; Flatwork</h3><div class="project-meta">Commercial</div><p>New curb, gutter, and sidewalk installation with reinforced mesh subgrade preparation for commercial frontage.</p></div>
-      </div>
+        <div class="project-card project-card--placeholder">
+          <div class="project-img project-img--placeholder"><span>Photo coming soon</span></div>
+          <div class="project-info"><h3>Project Title</h3><div class="project-meta">Project Type</div><p>Project description coming soon.</p></div>
+        </div>
 
-      <div class="project-card" data-cat="ada commercial">
-        <div class="project-img"><img src="images/project-07.jpg" alt="Completed ADA access ramp with detectable warning surfaces"><span class="project-tag">ADA Completed</span></div>
-        <div class="project-info"><h3>Completed ADA Access Route</h3><div class="project-meta">ADA Improvements</div><p>Final completed ADA ramp and walkway with detectable warning surfaces — compliant, clean, and durable.</p></div>
-      </div>
-
-      <div class="project-card" data-cat="commercial ada">
-        <div class="project-img"><img src="images/project-08.jpg" alt="Commercial concrete drive-thru approach"><span class="project-tag">Commercial Drive-thru</span></div>
-        <div class="project-info"><h3>Commercial Approach &amp; Drive Aisle</h3><div class="project-meta">Commercial</div><p>Wide concrete drive aisle and accessible approach at a commercial building with architectural curb transitions.</p></div>
-      </div>
-
-      <div class="project-card" data-cat="commercial ada">
-        <div class="project-img"><img src="images/project-09.jpg" alt="Completed commercial site concrete - Starbucks"><span class="project-tag">Site Concrete</span></div>
-        <div class="project-info"><h3>Commercial Site Concrete</h3><div class="project-meta">Tenant Improvement</div><p>Full site concrete scope for a commercial drive-through development including curb, sidewalk, flatwork, and ADA ramp systems.</p></div>
-      </div>
-
-      <div class="project-card" data-cat="ada commercial">
-        <div class="project-img"><img src="images/project-10.jpg" alt="ADA accessible ramp with galvanized handrail"><span class="project-tag">ADA Ramp</span></div>
-        <div class="project-info"><h3>ADA Accessible Ramp with Handrail</h3><div class="project-meta">ADA</div><p>Sloped accessible ramp with galvanized handrail and DWS panels, constructed to current ADA and CBC standards.</p></div>
-      </div>
-
-      <div class="project-card" data-cat="commercial ada repair">
-        <div class="project-img"><img src="images/project-11.jpg" alt="Complete commercial drive-through site overview"><span class="project-tag">Commercial Site</span></div>
-        <div class="project-info"><h3>Drive-Through – Complete Site</h3><div class="project-meta">New Construction</div><p>Complete concrete site scope including parking, curb, drive-through lane, flatwork, and accessible features.</p></div>
-      </div>
-
-      <div class="project-card" data-cat="commercial repair">
-        <div class="project-img"><img src="images/project-12.jpg" alt="Completed commercial parking lot with striping"><span class="project-tag">Paving &amp; Striping</span></div>
-        <div class="project-info"><h3>Commercial Parking &amp; Striping</h3><div class="project-meta">Commercial Flatwork</div><p>Completed commercial parking area with drive-through concrete approach, ADA stalls, and parking lot markings.</p></div>
-      </div>
-
-      <div class="project-card" data-cat="commercial ada repair">
-        <div class="project-img"><img src="images/project-13.jpg" alt="ADA parking stall with blue striping"><span class="project-tag">ADA Parking</span></div>
-        <div class="project-info"><h3>ADA Parking &amp; Accessible Striping</h3><div class="project-meta">ADA Compliance</div><p>ADA-designated parking stalls with proper striping, signage anchors, and detectable warning approach panels.</p></div>
-      </div>
-
-      <div class="project-card" data-cat="repair commercial ada">
-        <div class="project-img"><img src="images/project-02.jpg" alt="Medical office complex ADA access improvements"><span class="project-tag">ADA / Repair</span></div>
-        <div class="project-info"><h3>Medical Office – ADA Upgrade</h3><div class="project-meta">ADA Compliance</div><p>ADA access improvements for a medical office complex including ramp, DWS, and parking lot markings.</p></div>
-      </div>
-
-      <div class="project-card" data-cat="residential">
-        <div class="project-img"><img src="images/project-04.jpg" alt="Residential concrete driveway with smooth broom finish"><span class="project-tag">Residential</span></div>
-        <div class="project-info"><h3>Residential Concrete Driveway</h3><div class="project-meta">Residential Flatwork</div><p>Full replacement residential driveway pour with smooth broom finish, control joints, and proper sub-base compaction.</p></div>
-      </div>
-
-    </div><!-- /projects-grid -->
+      </div><!-- /projects-grid -->
+    </div><!-- /projects-panel -->
   </div>
 </section>
 
@@ -556,7 +507,7 @@
       <!-- Right: service areas -->
       <div class="about-full-right">
         <h3 class="area-heading">Service Areas</h3>
-        <p>We serve all of Southern California with no travel surcharge for most jobs:</p>
+        <p>We serve all of Southern California.</p>
         <div class="service-area-list">
           <span class="area-tag">Los Angeles County</span>
           <span class="area-tag">Riverside County</span>
@@ -577,7 +528,6 @@
 
         <div class="about-actions">
           <a href="#quote" class="btn btn-primary">Request a Quote</a>
-          <a href="#" class="yelp-link" data-yelp target="_blank" rel="noopener">⭐ Find Us on Yelp</a>
         </div>
       </div>
 
@@ -629,7 +579,6 @@
             <div class="cd-link cd-hours" data-hours></div>
           </div>
         </div>
-        <a href="#" class="yelp-link" data-yelp target="_blank" rel="noopener">⭐ Read Our Yelp Reviews</a>
       </div>
 
       <!-- Right: form -->
@@ -648,7 +597,7 @@
               </div>
               <div class="form-group" data-required>
                 <label for="q-phone">Phone Number *</label>
-                <input id="q-phone" type="tel" name="phone" placeholder="(626) 388-6790" autocomplete="tel">
+                <input id="q-phone" type="tel" name="phone" placeholder="(123) 456-7890" autocomplete="tel">
                 <div class="error">Please enter a valid phone number.</div>
               </div>
             </div>
@@ -842,7 +791,7 @@
               </div>
               <div class="form-group">
                 <label for="c-phone">Phone</label>
-                <input id="c-phone" type="tel" name="phone" placeholder="(626) 388-6790" autocomplete="tel">
+                <input id="c-phone" type="tel" name="phone" placeholder="(123) 456-7890" autocomplete="tel">
               </div>
             </div>
             <div class="form-group">
@@ -892,9 +841,6 @@
       <div class="footer-brand">
         <img src="images/logo.jpg" alt="MAC Contracting">
         <p>Licensed General Engineering Contractor based in Azusa, CA. Serving Los Angeles, Riverside, San Bernardino, and Orange Counties with quality craftsmanship since 2009.</p>
-        <div class="footer-social">
-          <a href="#" class="yelp-link" data-yelp target="_blank" rel="noopener">⭐ Yelp</a>
-        </div>
       </div>
 
       <!-- Services -->
@@ -919,7 +865,6 @@
           <li><a href="#projects">Project Gallery</a></li>
           <li><a href="#contact">Contact</a></li>
           <li><a href="#quote">Request a Quote</a></li>
-          <li><a href="#" data-yelp target="_blank" rel="noopener">Yelp Reviews</a></li>
         </ul>
       </div>
 
@@ -944,7 +889,6 @@
       <div data-copyright>© 2024 MAC Contracting. All rights reserved.</div>
       <div class="footer-bottom-links">
         <a href="#home">Back to Top ↑</a>
-        <a href="#" data-yelp target="_blank" rel="noopener">Yelp</a>
       </div>
     </div>
   </div>
