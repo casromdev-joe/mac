@@ -786,7 +786,8 @@ button { cursor: pointer; border: none; font-family: 'Inter', sans-serif; }
     }
     .contact-grid {
       display: grid;
-      grid-template-columns: 1fr 1.3fr;
+      grid-template-columns: 1fr;
+      max-width: 640px;
       gap: 60px;
       align-items: start;
     }
@@ -1023,13 +1024,10 @@ button { cursor: pointer; border: none; font-family: 'Inter', sans-serif; }
 /* Form heading */
 .form-heading { font-size: 24px; font-weight: 800; text-transform: uppercase; margin-bottom: 24px; }
 
-/* Contact right column */
-.contact-right { }
-.contact-right .after-hours-box { margin-top: 0; }
 
 /* After-hours box */
 .after-hours-box {
-  margin-top: 20px; padding: 20px;
+  margin-top: 32px; padding: 20px;
   background: var(--charcoal); border-radius: var(--radius);
   color: var(--white); display: flex; align-items: center;
   justify-content: space-between; flex-wrap: wrap; gap: 12px;
